@@ -16,8 +16,8 @@ class Review extends StatelessWidget {
   Widget build(BuildContext context) {
     final profilePic = Container(
       margin: const EdgeInsets.only(
-        top: 250.0,
-        left: 100.0,
+        top: 100.0,
+        left: 20.0,
       ),
       width: 80.0,
       height: 80.0,
@@ -31,12 +31,12 @@ class Review extends StatelessWidget {
     );
 
     final userName = Container(
-      margin: const EdgeInsets.only(left: 20.0),
+      margin: const EdgeInsets.only(top: 100, left: 20.0),
       child: Text(
         user,
         textAlign: TextAlign.left,
         style: GoogleFonts.lato(
-          fontSize: 20.0,
+          fontSize: 17.0,
           fontWeight: FontWeight.bold,
         ),
       ),
@@ -50,7 +50,7 @@ class Review extends StatelessWidget {
         details,
         textAlign: TextAlign.left,
         style: GoogleFonts.fasthand(
-          fontSize: 17.0,
+          fontSize: 14.0,
           color: Colors.black54,
         ),
       ),

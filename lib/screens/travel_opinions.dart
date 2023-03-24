@@ -1,55 +1,38 @@
 import 'package:flutter/material.dart';
+import 'package:profile_5b/screens/like_button.dart';
 
-class Opiniones extends StatelessWidget {
-  final String lugar;
-  final String visitado;
-  final String fecha;
-  const Opiniones(
-      {super.key,
-      required this.lugar,
-      required this.visitado,
-      required this.fecha});
+class CardOpinion extends StatelessWidget {
+  final String pathOpinion;
+  const CardOpinion({super.key, required this.pathOpinion});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.fromLTRB(25, 25, 25, 0),
-      child: Card(
-        shape:
-            RoundedRectangleBorder(borderRadius: BorderRadius.circular(13.0)),
-        elevation: 45,
-        child: Container(
-          child: Column(
-            children: [
-              Container(
-                margin: const EdgeInsets.only(top: 10),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  lugar,
-                  style: const TextStyle(fontSize: 20),
-                ),
-              ),
-              Container(
-                margin: const EdgeInsets.only(top: 5),
-                alignment: Alignment.centerLeft,
-                child: Text(visitado),
-              ),
-              Container(
-                  margin: const EdgeInsets.only(top: 5),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(fecha),
-                      const Icon(
-                        Icons.favorite,
-                        color: Color.fromARGB(255, 11, 95, 25),
-                      )
-                    ],
-                  ))
-            ],
-          ),
-        ),
+    // ignore: non_constant_identifier_names
+    final CardOpinion = Container(
+      height: 70.0,
+      width: 230.0,
+      margin: const EdgeInsets.only(
+        top: 80.0,
+        left: 10.0,
+        right: 40.0,
       ),
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          fit: BoxFit.cover,
+          image: AssetImage(pathOpinion),
+        ),
+        borderRadius: const BorderRadius.all(Radius.circular(20.0)),
+        boxShadow: const <BoxShadow>[
+          BoxShadow(
+              color: Color.fromARGB(255, 255, 255, 255),
+              blurRadius: 15.0,
+              offset: Offset(0.0, 7.0)),
+        ],
+      ),
+    );
+    return Stack(
+      alignment: const Alignment(0.9, 1.1),
+      children: [CardOpinion, const LikeButton()],
     );
   }
 }

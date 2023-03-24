@@ -9,7 +9,7 @@ class GradientBack extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 350.0,
+      height: 250.0,
       decoration: const BoxDecoration(
         gradient: LinearGradient(
           colors: [

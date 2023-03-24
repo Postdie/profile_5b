@@ -13,16 +13,16 @@ class CardImageList extends StatelessWidget {
         scrollDirection: Axis.vertical,
         children: const [
           CardImage(
-            pathImage: 'img/imge1.jpg',
+            pathImage: 'img/img1.jpg',
           ),
           CardImage(
-            pathImage: 'img/imge2.jpg',
+            pathImage: 'img/img2.jpg',
           ),
           CardImage(
-            pathImage: 'img/imge3.jpg',
+            pathImage: 'img/img3.jpg',
           ),
           CardImage(
-            pathImage: 'img/imge4.jpg',
+            pathImage: 'img/img4.jpg',
           ),
         ],
       ),

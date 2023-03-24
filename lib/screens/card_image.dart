@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:profile_5b/screens/travel_opinions.dart';
 
 class CardImage extends StatelessWidget {
   final String pathImage;
@@ -6,12 +7,14 @@ class CardImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final card = Container(
-      height: 350.0,
-      width: 250.0,
+    // ignore: non_constant_identifier_names
+    final CardImage = Container(
+      height: 160.0,
+      width: 280.0,
       margin: const EdgeInsets.only(
-        top: 80.0,
+        top: 150.0,
         left: 20.0,
+        right: 20.0,
       ),
       decoration: BoxDecoration(
         image: DecorationImage(
@@ -29,7 +32,7 @@ class CardImage extends StatelessWidget {
     );
     return Stack(
       alignment: const Alignment(0.9, 1.1),
-      //children: [card],
+      children: [CardImage, const CardOpinion(pathOpinion: '',)],
     );
   }
 }
